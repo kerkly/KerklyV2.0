@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "820163001283",
+    "project_id": "kerklynew",
+    "storage_bucket": "kerklynew.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:820163001283:android:8a8f57c156faabd45bdb76",
+        "android_client_info": {
+          "package_name": "com.app.kerkly"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "820163001283-ugd4f3rcob4620rmm1b3idog44v7pesi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJsC38VEA01zdq-u2aG1oYU2UYDPmEvvU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "820163001283-ugd4f3rcob4620rmm1b3idog44v7pesi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

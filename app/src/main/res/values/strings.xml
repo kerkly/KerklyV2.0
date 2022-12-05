@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">Kerkly</string>
+    <string name="api_key">AIzaSyBjTLMzrADu818zG6qM4_soOAM4zwHuFUA</string>
+    <string name="next">Siguiente</string>
+    <string name="introtext">Servicio en la puerta de tu casa. </string>
+    <string name="login">Iniciar Sesión</string>
+    <string name="register">Registro</string>
+    <string name="email">Email</string>
+    <string name="password">Contraseña</string>
+    <string name="forgrot">¡Has olvidado tu contraseña!</string>
+
+    <string name="name">Nombre</string>
+    <string name="mobile">Telefono</string>
+    <string name="refercode">Codigo de Referido</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="label_1">Menú</string>
+    <string name="label_2">Reservaciones</string>
+    <string name="search">Buscando...</string>
+    <string name="view_all_services">Ver todos los servicios</string>
+    <string name="select_a_service">Seleccione un servicio</string>
+    <string name="conti">Continuar</string>
+    <string name="proceed_to_pay">Proceda a pagar</string>
+    <string name="code">Codigo</string>
+    <string name="timetitle">¿Cuándo desea su servicio?</string>
+    <string name="address">Dirección para el servicio</string>
+    <string name="change">Cambio</string>
+    <string name="menu1">Registrarse como socio</string>
+    <string name="menu2">Mi reserva</string>
+    <string name="menu3">Acerca</string>
+    <string name="menu4">Compartir con amigo</string>
+    <string name="menu5">Recomendar y Ganar</string>
+    <string name="menu6">Mi billetera</string>
+    <string name="label_3">Billetera</string>
+    <string name="string_label_4">Notificación</string>
+    <string name="label_5">Ajuste</string>
+    <string name="income">Ingreso</string>
+    <string name="expense">Gastos</string>
+    <string name="transections">Transacción</string>
+    <!-- Strings used for fragments for navigation -->
+
+    <string name="update">Actualizar</string>
+    <string name="list_addon">Complemento de lista</string>
+    <string name="list_addonextra">Complemento adicional</string>
+    <string name="select_service">Tu servicio</string>
+    <string name="order_details">Detalles del pedido</string>
+    <string name="order_summary">Resumen del pedido</string>
+    <string name="introtext1">Tenemos excelentes y rápidos servicios para usted. \nElija el servicio que desea necesitar.</string>
+    <string name="privacy">Política de privacidad</string>
+    <string name="trams">Términos y Condiciones</string>
+    <string name="deletemesseg">Estas seguro que quieres cancelar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="contect">Contacto</string>
+    <string name="track">Estado del pedido</string>
+    <string name="title1">Felicidades!!! \n Tu pedido se ha realizado correctamente.</string>
+    <string name="title2">Verifique el estado de la entrega en la página \nMi reserva</string>
+    <string name="info">Información</string>
+    <string name="reschedule">Reprogramar</string>
+    <string name="wallet">Cartera</string>
+    <string name="usertitle">MN</string>
+    <string name="usersubtitle">Testimonios</string>
+</resources>

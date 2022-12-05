@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.app.kerkly">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name="com.app.kerkly.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TownClap"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name="com.app.kerkly.activity.ExportActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.kerkly.activity.HearExportListActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.kerkly.activity.HearCategotyActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.kerkly.activity.HearActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Intro" />
+        <activity
+            android:name="com.app.kerkly.activity.SearchActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.kerkly.activity.BookingDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.kerkly.activity.ResedulActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.kerkly.activity.BookingActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.kerkly.activity.NotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.kerkly.activity.ReferlActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.kerkly.activity.WalletActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.kerkly.activity.TimeSlotActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.kerkly.activity.CartActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.kerkly.activity.BasicActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.kerkly.activity.AddOnsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.kerkly.activity.ItemListActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.kerkly.activity.SubCategoryActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Intro" />
+        <activity
+            android:name="com.app.kerkly.activity.SubCategoyTypeActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.kerkly.activity.ServiceAllActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.kerkly.activity.DynamicAllActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.kerkly.activity.SearchLocationActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Intro" />
+        <activity
+            android:name="com.app.kerkly.activity.LoginActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Intro" />
+        <activity
+            android:name="com.app.kerkly.activity.HomeActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Intro" />
+        <activity
+            android:name="com.app.kerkly.activity.VerifyPhoneActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Intro" />
+        <activity
+            android:name="com.app.kerkly.activity.FlutterwaveActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.kerkly.activity.SenangpayActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.kerkly.activity.PaystackActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.kerkly.activity.PaytmActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.kerkly.activity.AddressActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.kerkly.activity.RazerpayActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.kerkly.activity.StripPaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.kerkly.activity.PaypalActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.kerkly.activity.SettingActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.kerkly.activity.PrivecyPolicyActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.kerkly.activity.AboutsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.kerkly.activity.TramsAndConditionActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.kerkly.activity.ContectusActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.kerkly.activity.EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.kerkly.activity.ForgotActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.kerkly.activity.ChanegPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.app.kerkly.activity.IntroActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Intro" />
+        <activity
+            android:name="com.app.kerkly.locationpick.LocationGetActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Intro" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/api_key" />
+
+        <activity
+            android:name="com.app.kerkly.activity.FirstActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Intro">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <receiver
+            android:name="com.razorpay.RzpTokenReceiver"
+            android:exported="false"
+            tools:ignore="MissingClass">
+            <intent-filter>
+                <action android:name="rzp.device_token.share" />
+            </intent-filter>
+        </receiver>
+        <activity
+            android:name="com.razorpay.CheckoutActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@style/CheckoutTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <data
+                    android:host="rzp.io"
+                    android:scheme="io.rzp" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
