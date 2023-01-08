@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "820163001283-g3qitqa4qq14hm0nq9078l8fe4t3vtvi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.kerkly",
+            "certificate_hash": "be14a2786365de198174c8c360464357487df115"
+          }
+        },
+        {
           "client_id": "820163001283-ugd4f3rcob4620rmm1b3idog44v7pesi.apps.googleusercontent.com",
           "client_type": 3
         }

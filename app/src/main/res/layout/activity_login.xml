@@ -267,6 +267,8 @@
                             android:layout_marginTop="5dp"
                             android:background="@drawable/border"
                             android:ems="10"
+                            android:textColor="@color/black"
+                            android:text="+52"
                             android:hint=""
                             android:padding="10dp">
 

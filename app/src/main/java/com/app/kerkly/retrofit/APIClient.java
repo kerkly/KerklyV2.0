@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class APIClient {
     static Retrofit retrofit = null;
-    public static String baseUrl = "https://ker.aftconta.mx";
+    public static String baseUrl = "https://ker.kerkly.com";
     public static final String APPEND_URL = "/tcapi/";
 
     public static UserService getInterface() {
