@@ -38,6 +38,12 @@
     <string name="transections">Transacción</string>
     <!-- Strings used for fragments for navigation -->
 
+
+    <string name="normal.channel.id">channel.id.notification.normal</string>
+    <string name="normal.channel.name">Oferta normal</string>
+
+
+
     <string name="update">Actualizar</string>
     <string name="list_addon">Complemento de lista</string>
     <string name="list_addonextra">Complemento adicional</string>
