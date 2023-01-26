@@ -1,6 +1,7 @@
 package com.app.kerkly.activity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -46,6 +47,7 @@ public class IntroActivity extends AppCompatActivity {
         setContentView(R.layout.activity_intro);
         ButterKnife.bind(this);
 
+
         vpPager = findViewById(R.id.vpPager);
         sessionManager = new SessionManager(IntroActivity.this);
         adapterViewPager = new MyPagerAdapter(getSupportFragmentManager());
@@ -56,6 +58,12 @@ public class IntroActivity extends AppCompatActivity {
         vpPager.setAdapter(adapterViewPager);
         ExtensiblePageIndicator extensiblePageIndicator = (ExtensiblePageIndicator) findViewById(R.id.flexibleIndicator);
         extensiblePageIndicator.initViewPager(vpPager);
+
+
+        if(!isFirstTime()){
+            startActivity(new Intent(IntroActivity.this, LoginActivity.class));
+            finish();
+        }
         vpPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -134,5 +142,18 @@ public class IntroActivity extends AppCompatActivity {
             return fragment;
         }
 
+    } private boolean isFirstTime()
+    {
+        SharedPreferences preferences = getPreferences(MODE_PRIVATE);
+        boolean ranBefore = preferences.getBoolean("RanBefore", false);
+        if (!ranBefore) {
+            // first time
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.putBoolean("RanBefore", true);
+            editor.commit();
+        }
+        return !ranBefore;
     }
+
+
 }

@@ -1,49 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/black"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
     android:fillViewport="true"
     android:orientation="vertical"
     tools:context=".activity.LoginActivity">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        >
 
-        android:orientation="vertical">
+        <VideoView
+            android:id="@+id/vv_fondo"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="2:4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+            >
+        </VideoView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:gravity="center">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/app_name"
-                android:textColor="@color/white"
-                android:textSize="21dp"
-                android:textStyle="bold" />
-        </LinearLayout>
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
 
 
-            android:background="@drawable/raound_login"
+
             android:gravity="top"
             android:orientation="vertical"
             android:padding="10dp">
 
+
+
+            <ImageView
+                android:id="@+id/logokerkly"
+                android:layout_width="200dp"
+                android:layout_gravity="center"
+                android:layout_height="150dp"
+                app:srcCompat="@drawable/kerr" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:layout_marginTop="40dp"
                 android:padding="10dp">
 
                 <TextView
@@ -77,6 +90,7 @@
                     android:textStyle="bold" />
             </LinearLayout>
 
+
             <LinearLayout
                 android:id="@+id/lvl_login"
                 android:layout_width="match_parent"
@@ -93,7 +107,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Welcome back!"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/white" />
 
                 <View
                     android:layout_width="20dp"
@@ -101,24 +115,30 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:orientation="vertical">
 
                     <TextView
+                        android:layout_marginTop="30dp"
                         android:layout_width="wrap_content"
+
+                        android:textColor="@color/white"
                         android:layout_height="wrap_content"
                         android:text="@string/email"
-                        android:textColor="@color/black" />
+                   />
 
                     <EditText
                         android:id="@+id/ed_email"
-                        android:layout_width="match_parent"
+                         android:layout_width="match_parent"
+
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+
+                        android:layout_marginTop="15dp"
                         android:background="@drawable/border"
                         android:inputType="textEmailAddress"
-                        android:padding="10dp"
-                        android:textColor="@color/black" />
+                        android:padding="15dp"
+                        android:textColor="@color/white" />
+
                 </LinearLayout>
 
                 <View
@@ -128,23 +148,37 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/linearL"
                     android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:textColor="@color/white"
                         android:text="@string/password"
-                        android:textColor="@color/black" />
+                        />
 
-                    <EditText
-                        android:id="@+id/ed_passsword"
+                    <com.google.android.material.textfield.TextInputLayout
+                        app:passwordToggleEnabled = "true"
+                        app:passwordToggleTint="@color/white"
+                        app:passwordToggleDrawable="@drawable/ic_baseline_remove_red_eye_24"
+                        android:id="@+id/login_password_container"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:background="@drawable/border"
-                        android:inputType="textPassword"
-                        android:padding="10dp"
-                        android:textColor="@color/black" />
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/ed_passsword"
+
+                            android:background="@drawable/border"
+android:textColor="@color/white"
+                          android:layout_width="match_parent"
+                            android:imeOptions="actionDone"
+                            android:inputType="textPassword"
+                            android:layout_height="wrap_content"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
                 </LinearLayout>
 
                 <View
@@ -157,7 +191,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
                     android:text="@string/forgrot"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/white" />
 
                 <View
                     android:layout_width="20dp"
@@ -167,6 +201,7 @@
                     android:id="@+id/txt_login"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
+                    android:layout_marginTop="30dp"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp"
                     android:background="@drawable/rounded_button"
@@ -200,7 +235,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/name"
-                        android:textColor="@color/black" />
+                        android:textColor="@color/white" />
 
                     <EditText
                         android:id="@+id/ed_name"
@@ -210,7 +245,7 @@
                         android:background="@drawable/border"
                         android:inputType="text"
                         android:padding="10dp"
-                        android:textColor="@color/black" />
+                        android:textColor="@color/white" />
                 </LinearLayout>
 
                 <View
@@ -226,7 +261,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/email"
-                        android:textColor="@color/black" />
+                        android:textColor="@color/white" />
 
                     <EditText
                         android:id="@+id/ed_emailnew"
@@ -236,7 +271,7 @@
                         android:background="@drawable/border"
                         android:inputType="textEmailAddress"
                         android:padding="10dp"
-                        android:textColor="@color/black" />
+                        android:textColor="@color/white" />
                 </LinearLayout>
 
                 <View
@@ -258,16 +293,19 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/code"
-                            android:textColor="@color/black" />
+                            android:enabled="false"
+                            android:textColor="@color/white" />
 
                         <AutoCompleteTextView
                             android:id="@+id/at_code"
+                            android:enabled="false"
+
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
                             android:background="@drawable/border"
                             android:ems="10"
-                            android:textColor="@color/black"
+                            android:textColor="@color/white"
                             android:text="+52"
                             android:hint=""
                             android:padding="10dp">
@@ -290,7 +328,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/mobile"
-                            android:textColor="@color/black" />
+
+                            android:textColor="@color/white" />
 
                         <EditText
                             android:id="@+id/ed_mobile"
@@ -299,8 +338,9 @@
                             android:layout_marginTop="5dp"
                             android:background="@drawable/border"
                             android:inputType="phone"
+                            android:maxLength="10"
                             android:padding="10dp"
-                            android:textColor="@color/black" />
+                            android:textColor="@color/white" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -317,7 +357,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/password"
-                        android:textColor="@color/black" />
+                        android:textColor="@color/white" />
 
                     <EditText
                         android:id="@+id/ed_passswordnew"
@@ -327,7 +367,7 @@
                         android:background="@drawable/border"
                         android:inputType="textPassword"
                         android:padding="10dp"
-                        android:textColor="@color/black" />
+                        android:textColor="@color/white" />
                 </LinearLayout>
 
                 <View
@@ -343,7 +383,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/refercode"
-                        android:textColor="@color/black" />
+                        android:textColor="@color/white" />
 
                     <EditText
                         android:id="@+id/ed_refercode"
@@ -353,7 +393,7 @@
                         android:background="@drawable/border"
                         android:inputType="text"
                         android:padding="10dp"
-                        android:textColor="@color/black" />
+                        android:textColor="@color/white" />
                 </LinearLayout>
 
 
@@ -377,5 +417,7 @@
             </LinearLayout>
 
         </LinearLayout>
-    </LinearLayout>
+
+
+</RelativeLayout>
 </ScrollView>

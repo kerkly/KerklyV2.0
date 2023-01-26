@@ -86,13 +86,13 @@ public class VerifyPhoneActivity extends AppCompatActivity implements GetResult.
         phonenumber = getIntent().getStringExtra("phone");
         phonecode = getIntent().getStringExtra("code");
         sendVerificationCode(phonecode + phonenumber);
-        txtMob.setText("We have sent you an SMS on " + phonecode + " " + phonenumber + "\n with 6 digit verification code");
+        txtMob.setText("Se ha enviado un SMS al número" +"\n"+ phonecode + " " + phonenumber + "\n coloca los 6 codigos de verificación.");
         try {
             new CountDownTimer(60000, 1000) {
                 @Override
                 public void onTick(long millisUntilFinished) {
                     long seconds = TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished);
-                    btnTimer.setText(seconds + " Secound Wait");
+                    btnTimer.setText(seconds + " segundos");
                 }
 
                 @Override

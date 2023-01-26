@@ -67,7 +67,7 @@ dependencies {
 
 
     // In-App Messaging
- 
+
     implementation 'com.google.guava:guava:27.0.1-android'
 
     implementation 'com.google.firebase:firebase-analytics:17.5.0'
@@ -87,6 +87,9 @@ dependencies {
     implementation 'co.paystack.android.design.widget:pinpad:1.0.4'
     implementation 'co.paystack.android:paystack:3.0.17'
 
+    //lottie
+    implementation "com.airbnb.android:lottie:3.0.7"
+    implementation 'com.github.welcome2c:LottieProgressDialog:1.0.1'
 
 
 

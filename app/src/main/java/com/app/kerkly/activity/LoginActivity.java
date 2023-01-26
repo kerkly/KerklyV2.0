@@ -5,18 +5,24 @@ import static com.app.kerkly.utils.Utility.isvarification;
 
 import android.Manifest;
 import android.content.Intent;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListAdapter;
+import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,6 +36,7 @@ import com.app.kerkly.retrofit.APIClient;
 import com.app.kerkly.retrofit.GetResult;
 import com.app.kerkly.utils.CustPrograssbar;
 import com.app.kerkly.utils.SessionManager;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.FirebaseApp;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
@@ -81,14 +88,95 @@ public class LoginActivity extends AppCompatActivity implements GetResult.MyList
     AutoCompleteTextView atCode;
     CustPrograssbar custPrograssbar;
     SessionManager sessionManager;
+TextInputLayout login_password_container;
+    Animation animacion1,animacion2,animacion3,animacion4,animacion5,animacion6,animacion7;
 
-    @RequiresApi(api = Build.VERSION_CODES.M)
+    VideoView simpleVideoView;
+    MediaController mediaControls;
+     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
         FirebaseApp.initializeApp(this);
+
+        login_password_container = findViewById(R.id.login_password_container);
+        //video de fondo
+         //animaciones
+         animacion1 = AnimationUtils.loadAnimation(this, R.anim.from_left_quick_math);
+         edEmail.startAnimation(animacion1);
+
+         animacion2 = AnimationUtils.loadAnimation(this, R.anim.from_right_0);
+         edPasssword.startAnimation(animacion2);
+
+
+         animacion3 = AnimationUtils.loadAnimation(this, R.anim.from_left_advanced);
+         edName.startAnimation(animacion3);
+
+         animacion4 = AnimationUtils.loadAnimation(this, R.anim.from_right_3);
+         edEmailnew.startAnimation(animacion4);
+
+         animacion5 = AnimationUtils.loadAnimation(this, R.anim.from_left_advanced);
+         edMobile.startAnimation(animacion5);
+
+         animacion6 = AnimationUtils.loadAnimation(this, R.anim.from_right_3);
+         edPassswordnew.startAnimation(animacion6);
+
+         animacion7 = AnimationUtils.loadAnimation(this, R.anim.from_right_1);
+         edRefercode.startAnimation(animacion7);
+/*
+         animation3 = AnimationUtils.loadAnimation(this, R.anim.from_left_advanced);
+         layoutContra.startAnimation(animation3);
+
+         animation4 = AnimationUtils.loadAnimation(this, R.anim.from_right_0);
+         boton.startAnimation(animation4);
+
+
+ */
+
+         simpleVideoView = (VideoView) findViewById(R.id.vv_fondo);
+
+         if (mediaControls == null) {
+             // create an object of media controller class
+             mediaControls = new MediaController(this);
+             mediaControls.setAnchorView(simpleVideoView);
+         }
+         simpleVideoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+             @Override
+             public void onPrepared(MediaPlayer mp) {
+                 float videoRatio = mp.getVideoWidth() / (float) mp.getVideoHeight();
+                 float screenRatio = simpleVideoView.getWidth() / (float)
+                         simpleVideoView.getHeight();
+                 float scaleX = videoRatio / screenRatio;
+                 if (scaleX >= 1f) {
+                     simpleVideoView.setScaleX(scaleX);
+                 } else {
+                     simpleVideoView.setScaleY(1f / screenRatio);
+                 }
+             }
+         });
+
+         // set the uri for the video view
+         simpleVideoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.fondokerklyy));
+         // start a video
+         simpleVideoView.start();
+
+         // implement on completion listener on video view
+         simpleVideoView.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+             @Override
+             public void onCompletion(MediaPlayer mp) {
+                 simpleVideoView.start();
+              }
+         });
+         simpleVideoView.setOnErrorListener(new MediaPlayer.OnErrorListener() {
+             @Override
+             public boolean onError(MediaPlayer mp, int what, int extra) {
+                 Toast.makeText(getApplicationContext(), "Oops An Error Occur While Playing Video...!!!", Toast.LENGTH_LONG).show(); // display a toast when an error is occured while playing an video
+                 return false;
+             }
+         });
+
         requestPermissions(new String[]{Manifest.permission.CALL_PHONE, Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION}, 1);
         custPrograssbar = new CustPrograssbar();
         sessionManager = new SessionManager(LoginActivity.this);
@@ -266,13 +354,25 @@ public class LoginActivity extends AppCompatActivity implements GetResult.MyList
         return true;
     }
 
+    public boolean isValidEmail(String emailToReview){
+        final String regex = "(?:[^<>()\\[\\].,;:\\s@\"]+(?:\\.[^<>()\\[\\].,;:\\s@\"]+)*|\"[^\\n\"]+\")@(?:[^<>()\\[\\].,;:\\s@\"]+\\.)+[^<>()\\[\\]\\.,;:\\s@\"]{2,63}";
+        if (!emailToReview.matches(regex)) {
+            return false; //Es incorrecto
+        }else{
+            return true; // Es correcto
+        }
+    }
     public boolean validationCreate() {
         if (TextUtils.isEmpty(edName.getText().toString())) {
             edName.setError("Enter Name");
             return false;
         }
         if (TextUtils.isEmpty(edEmailnew.getText().toString())) {
+
             edEmailnew.setError("Enter Email");
+
+
+
             return false;
         }
         if (TextUtils.isEmpty(edMobile.getText().toString())) {
@@ -286,4 +386,19 @@ public class LoginActivity extends AppCompatActivity implements GetResult.MyList
 
         return true;
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+//        mCurrentVideoPosition = mMediaPlayer.currentPosition;
+       simpleVideoView.pause();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+       simpleVideoView.start();
+    }
+
+
 }

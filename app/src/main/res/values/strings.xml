@@ -9,9 +9,9 @@
     <string name="password">Contraseña</string>
     <string name="forgrot">¡Has olvidado tu contraseña!</string>
 
-    <string name="name">Nombre</string>
+    <string name="name">Nombre Completo</string>
     <string name="mobile">Telefono</string>
-    <string name="refercode">Codigo de Referido</string>
+    <string name="refercode">Codigo de Referido (Opcional)</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="label_1">Menú</string>
     <string name="label_2">Reservaciones</string>
