@@ -155,13 +155,26 @@
                             android:layout_height="wrap_content"
                             android:text="Password" />
 
-                        <EditText
-                            android:id="@+id/ed_password"
+                        <com.google.android.material.textfield.TextInputLayout
+                            app:passwordToggleEnabled = "true"
+
+                            app:passwordToggleDrawable="@drawable/ic_baseline_remove_red_eye_24"
+                            android:id="@+id/login_password_container"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@null"
-                            android:inputType="textPassword"
-                            android:padding="5dp" />
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/ed_password"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/border"
+                                android:inputType="textPassword"
+
+                                android:textSize="20dp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
                     </LinearLayout>
                 </LinearLayout>
 

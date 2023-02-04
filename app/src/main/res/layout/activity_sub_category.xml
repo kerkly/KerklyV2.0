@@ -14,13 +14,14 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="400dp"
+            android:layout_height="200dp"
             android:gravity="center">
 
             <VideoView
                 android:id="@+id/plyer"
+
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="match_parent" />
 
             <ImageView
                 android:id="@+id/img_back"
@@ -37,7 +38,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
-                android:src="@drawable/ic_transparent" />
+                android:src="@drawable/fondotrasn" />
 
             <LinearLayout
                 android:layout_width="match_parent"

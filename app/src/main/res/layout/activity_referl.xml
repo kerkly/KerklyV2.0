@@ -34,7 +34,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:padding="15dp"
-                    android:text="Refer your friends \nand Earn "
+                    android:text="Refiere y Gana "
                     android:textColor="@color/white"
                     android:textSize="21dp" />
 
@@ -59,7 +59,7 @@
                     android:background="@drawable/circale_green"
                     android:gravity="center"
                     android:padding="15dp"
-                    android:text="Share your Referral code via social media and earn more then from your expectation."
+                    android:text="Comparta su código de referencia a través de las redes sociales y gane más de lo que espera."
                     android:textColor="@color/white" />
 
                 <View
@@ -122,7 +122,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Invite friends now"
+                android:text="Invita tus amigos"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -157,7 +157,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
-                    android:text="Share your referal code"
+                    android:text="Comparte tu codigo de referido"
                     android:textColor="@color/black"
                     android:textStyle="bold" />
             </LinearLayout>

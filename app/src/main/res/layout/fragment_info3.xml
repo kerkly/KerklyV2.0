@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+
+    android:background="@drawable/intro22"
     android:orientation="vertical">
 
     <LinearLayout
@@ -32,7 +33,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/arriba"
                 app:lottie_autoPlay="true"
                 app:lottie_loop="true"
-                app:lottie_rawRes="@raw/servicios">
+                app:lottie_rawRes="@raw/kerkly">
 
             </com.airbnb.lottie.LottieAnimationView>
 

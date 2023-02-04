@@ -51,7 +51,7 @@ public class SettingActivity extends BasicActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
         ButterKnife.bind(this);
-        getSupportActionBar().setTitle("My Profile");
+        getSupportActionBar().setTitle("Perfil");
         custPrograssbar = new CustPrograssbar();
         sessionManager = new SessionManager(SettingActivity.this);
         user = sessionManager.getUserDetails("");

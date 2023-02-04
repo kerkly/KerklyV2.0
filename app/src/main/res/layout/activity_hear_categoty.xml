@@ -13,7 +13,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
         android:padding="10dp"
-        android:text="What service are you \nlooking for ?"
+        android:text="¿Que servicio estas buscando ?"
         android:textColor="@color/black"
         android:textSize="22dp" />
 

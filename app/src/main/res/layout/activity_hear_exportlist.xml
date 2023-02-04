@@ -13,7 +13,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
         android:padding="10dp"
-        android:text="Choose Best Recommendation from your near by !"
+        android:text="Elije el mejor servidor cerca de ti!"
         android:textColor="@color/black"
         android:textSize="22dp" />
 

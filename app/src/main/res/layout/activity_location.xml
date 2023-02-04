@@ -90,7 +90,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="House No / Flat / Block Number" />
+                        android:text="Colonia / Calle / Numero" />
 
                 <EditText
                     android:id="@+id/ed_hoseno"
@@ -114,7 +114,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Landmark" />
+                    android:text="Punto de referencia" />
 
                 <EditText
                     android:id="@+id/ed_landmark"
@@ -129,7 +129,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:padding="3dp"
-                android:text="Save As"
+                android:text="Guarda como:"
                 android:textColor="@color/black"
                 android:textStyle="bold" />
 

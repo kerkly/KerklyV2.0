@@ -57,7 +57,7 @@ public class ReferlActivity extends BasicActivity implements GetResult.MyListene
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_referl);
         ButterKnife.bind(this);
-        getSupportActionBar().setTitle("Refer & Earn");
+        getSupportActionBar().setTitle("Refiere y Gana!");
         sessionManager = new SessionManager(ReferlActivity.this);
         custPrograssbar = new CustPrograssbar();
         user = sessionManager.getUserDetails("");
@@ -88,8 +88,8 @@ public class ReferlActivity extends BasicActivity implements GetResult.MyListene
                 Gson gson = new Gson();
                 ResponseMessge restResponse = gson.fromJson(result.toString(), ResponseMessge.class);
                 if (restResponse.getResult().equalsIgnoreCase("true")) {
-                    txtT2.setText("Friends get " + sessionManager.getStringData(SessionManager.currency) + restResponse.getRefercredit() + " on their first complete order");
-                    txtT3.setText("You get " + sessionManager.getStringData(SessionManager.currency) + restResponse.getSignupcredit() + " on your wallet");
+                    txtT2.setText("Tus amigos reciben " + sessionManager.getStringData(SessionManager.currency) + restResponse.getRefercredit() + " en su primer pedido de servicio completo.");
+                    txtT3.setText("Obten " + sessionManager.getStringData(SessionManager.currency) + restResponse.getSignupcredit() + " en tu cartera");
                     txtCode.setText("" + restResponse.getCode());
 
                 }
@@ -108,7 +108,7 @@ public class ReferlActivity extends BasicActivity implements GetResult.MyListene
                     Intent shareIntent = new Intent(Intent.ACTION_SEND);
                     shareIntent.setType("text/plain");
                     shareIntent.putExtra(Intent.EXTRA_SUBJECT, "My application name");
-                    String shareMessage = "Hey! Now use our app to share with your family or friends. User will get wallet amount on your 1st successful order. Enter my referral code *" + txtCode.getText().toString() + "* & Enjoy your shopping !!!";
+                    String shareMessage = "¡Ey! Ahora usa nuestra aplicación para compartir con tu familia o amigos. El usuario obtendrá el monto de la billetera en su primer pedido exitoso. Ingrese mi código de referencia *" + txtCode.getText().toString() + "* ¡Disfruta de tus servicios!";
                     shareMessage = shareMessage + " https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID + "\n\n";
                     shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage);
                     startActivity(Intent.createChooser(shareIntent, "choose one"));
@@ -122,7 +122,7 @@ public class ReferlActivity extends BasicActivity implements GetResult.MyListene
             case R.id.txt_copy:
                 ClipboardManager cm = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
                 cm.setText(txtCode.getText().toString());
-                Toast.makeText(ReferlActivity.this, "Text Copy", Toast.LENGTH_LONG).show();
+                Toast.makeText(ReferlActivity.this, "Copiado!", Toast.LENGTH_LONG).show();
                 break;
             default:
                 break;

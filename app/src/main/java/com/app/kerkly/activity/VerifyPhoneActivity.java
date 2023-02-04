@@ -333,7 +333,7 @@ public class VerifyPhoneActivity extends AppCompatActivity implements GetResult.
                         @Override
                         public void onTick(long millisUntilFinished) {
                             long seconds = TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished);
-                            btnTimer.setText(seconds + " Secound Wait");
+                            btnTimer.setText(seconds + " Segundos espera");
                         }
 
                         @Override

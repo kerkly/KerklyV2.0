@@ -170,12 +170,13 @@
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/ed_passsword"
 
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:background="@drawable/border"
-android:textColor="@color/white"
-                          android:layout_width="match_parent"
-                            android:imeOptions="actionDone"
                             android:inputType="textPassword"
-                            android:layout_height="wrap_content"/>
+
+                            android:textColor="@color/white"
+                            android:textSize="20dp" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -359,15 +360,29 @@ android:textColor="@color/white"
                         android:text="@string/password"
                         android:textColor="@color/white" />
 
-                    <EditText
-                        android:id="@+id/ed_passswordnew"
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        app:passwordToggleEnabled = "true"
+                        app:passwordToggleTint="@color/white"
+                        app:passwordToggleDrawable="@drawable/ic_baseline_remove_red_eye_24"
+                        android:id="@+id/login_password_container"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:background="@drawable/border"
-                        android:inputType="textPassword"
-                        android:padding="10dp"
-                        android:textColor="@color/white" />
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/ed_passswordnew"
+android:textSize="20dp"
+                            android:background="@drawable/border"
+                            android:textColor="@color/white"
+
+                            android:layout_width="match_parent"
+                            android:imeOptions="actionDone"
+                            android:inputType="textPassword"
+                            android:layout_height="wrap_content"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
                 </LinearLayout>
 
                 <View

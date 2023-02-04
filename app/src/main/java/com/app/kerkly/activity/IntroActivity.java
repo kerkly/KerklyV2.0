@@ -60,10 +60,13 @@ public class IntroActivity extends AppCompatActivity {
         extensiblePageIndicator.initViewPager(vpPager);
 
 
+        /*
         if(!isFirstTime()){
             startActivity(new Intent(IntroActivity.this, LoginActivity.class));
             finish();
         }
+
+         */
         vpPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {

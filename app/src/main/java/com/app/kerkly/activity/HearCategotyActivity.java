@@ -32,7 +32,7 @@ public class HearCategotyActivity extends AppCompatActivity implements CategoryA
         setContentView(R.layout.activity_hear_categoty);
         ButterKnife.bind(this);
 
-        getSupportActionBar().setTitle("Direct Hire Experts");
+        getSupportActionBar().setTitle("Servicios");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Bundle b = this.getIntent().getExtras();

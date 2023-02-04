@@ -28,7 +28,7 @@
                 android:layout_height="match_parent"
                 android:padding="0dp"
                 android:scaleType="fitXY"
-                android:background="@drawable/hire_exp_2" />
+                android:background="@drawable/info2" />
 
         </LinearLayout>
 
@@ -37,7 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentBottom="true"
-            android:layout_weight="3"
+            android:layout_weight="5"
             android:background="@color/white"
             android:gravity="center|top"
             android:orientation="vertical">
@@ -54,20 +54,11 @@
                     android:layout_height="wrap_content"
                     android:gravity="center|right"
                     android:padding="10dp"
-                    android:text="Millions of professionals ! "
-                    android:textColor="@color/black"
+                    android:text="Cientos de profesionales "
+
                     android:textSize="21dp" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="15dp"
-                    android:gravity="center|right"
-                    android:paddingLeft="5dp"
-                    android:text="Worldwide to deliver services at home like never experienced before"
 
-                    android:textSize="16dp" />
 
             </LinearLayout>
 
