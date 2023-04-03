@@ -51,15 +51,15 @@ public class ChanegPasswordActivity extends AppCompatActivity implements GetResu
     public boolean validation() {
 
         if (edPassword.getText().toString().isEmpty()) {
-            edPassword.setError("Enter Password");
+            edPassword.setError("Ingresa contraseña");
             return false;
         }
         if (edConPassword.getText().toString().isEmpty()) {
-            edConPassword.setError("Enter Confirm");
+            edConPassword.setError("Ingresa contraseña");
             return false;
         }
         if (!edConPassword.getText().toString().equals(edPassword.getText().toString())) {
-            edConPassword.setError("Mismatch Password");
+            edConPassword.setError("Las contraseñas no coinciden");
             edPassword.setError("Mismatch Password");
             return false;
         }
