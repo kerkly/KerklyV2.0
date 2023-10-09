@@ -16,7 +16,6 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class ExportActivity extends AppCompatActivity {
-
     @BindView(R.id.txt_image)
     ImageView txtImage;
     @BindView(R.id.txt_name)

@@ -11,9 +11,7 @@ import com.app.kerkly.R;
 import com.app.kerkly.utils.SessionManager;
 
 public class FirstActivity extends AppCompatActivity {
-
     SessionManager sessionManager;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
